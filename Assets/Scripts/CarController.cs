@@ -43,6 +43,10 @@ public class CarController : MonoBehaviour
         }
     }
 
+    private string GetIt()
+    {
+        return "It!";
+    }
     private void ApplyBreaking()
     {
         leftFrontWheelCollider.brakeTorque = currentBreakForce;
