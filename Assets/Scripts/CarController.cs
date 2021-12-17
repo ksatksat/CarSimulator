@@ -17,6 +17,14 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rightFrontWheelTransform;
     [SerializeField] private Transform leftRearWheelTransform;
     [SerializeField] private Transform rightRearWheelTransform;
+    [SerializeField] private Transform centerOfMass;
+    Rigidbody m_rigidbody;
+
+    private void Start()
+    {
+        m_rigidbody = GetComponent<Rigidbody>();
+        m_rigidbody.centerOfMass = centerOfMass.localPosition;
+    }
 
     private void FixedUpdate()
     {
